@@ -24,6 +24,9 @@ public class main {
         clients.add(new Client("Martin",8, BankOperation.ResolvingCustomerIsuees));
         clients.add(new Client("Luis",9, BankOperation.Deposits));
         clients.add(new Client("Camilo",10, BankOperation.Withdrawals));
+        clients.add(new Client("Pablo",11, BankOperation.Deposits));
+
+
 
 
 

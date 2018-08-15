@@ -1,19 +1,20 @@
-public class Supervisor {
+import java.util.function.Supplier;
 
-    int id;
-    String name;
+public class Supervisor implements Supplier<String> {
 
-    public Supervisor(int id, String name) {
-        this.id = id;
+
+    private String name;
+    private boolean status;
+    private Client client;
+    private int attentionTime;
+
+
+    public Supervisor(String name, boolean status, Client client) {
+
         this.name = name;
-    }
+        this.status = status;
+        this.client = client;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -23,4 +24,29 @@ public class Supervisor {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String get() {
+        return Attend();
+    }
+
+    public String Attend() {
+
+        attentionTime=(int)Math.floor(Math.random()*(15-10+1)+(10));
+        try {
+            Thread.sleep(attentionTime*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return name + " "+client.getName()+" "+client.getId()+" "+client.getOperation();
+    }
+
+    public boolean isAvailability() {
+        return status;
+    }
+
+    public void setAvailability(boolean status) {
+        this.status = status;
+    }
+
 }
