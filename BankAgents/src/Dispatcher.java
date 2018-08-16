@@ -1,13 +1,8 @@
-import sun.font.TrueTypeFont;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
-import static java.lang.System.in;
-import static java.lang.System.out;
 
 public class Dispatcher {
 
@@ -65,7 +60,7 @@ public class Dispatcher {
 
     public void attend(List<Client> clients) {
         int i = 0;
-        
+
         while (i < clients.size()) {
 
             Cashier cashierAvailable = obtainCashierAvailable();

@@ -1,4 +1,3 @@
-import java.util.Map;
 import java.util.function.Supplier;
 
 public class Cashier  implements Supplier <String>{
@@ -14,17 +13,8 @@ public class Cashier  implements Supplier <String>{
 
         this.name = name;
         this.status = status;
-        this.client = client;
-    }
+        this.client = client;   }
 
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     @Override
     public String get() {
@@ -35,9 +25,6 @@ public class Cashier  implements Supplier <String>{
         return attentionTime;
     }
 
-    public void setAttentionTime(int attentionTime) {
-        this.attentionTime = attentionTime;
-    }
 
     public String Attend() {
 
@@ -51,9 +38,6 @@ public class Cashier  implements Supplier <String>{
         return name + " Attends client: "+client.getName()+ " Client Id: "+client.getId()+ " Operation: "+client.getOperation();
     }
 
-    public Client getClient() {
-        return client;
-    }
 
     public void setClient(Client client) {
         this.client = client;

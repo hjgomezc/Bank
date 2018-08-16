@@ -17,14 +17,6 @@ public class Supervisor implements Supplier<String> {
 
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @Override
     public String get() {
         return Attend();
@@ -45,14 +37,6 @@ public class Supervisor implements Supplier<String> {
         return attentionTime;
     }
 
-    public void setAttentionTime(int attentionTime) {
-        this.attentionTime = attentionTime;
-    }
-
-    public Client getClient() {
-
-        return client;
-    }
 
     public void setClient(Client client) {
         this.client = client;

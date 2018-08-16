@@ -16,22 +16,11 @@ public  class Director implements Supplier<String> {
 
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @Override
     public String get() {
         return Attend();
     }
 
-    public Client getClient() {
-        return client;
-    }
 
     public void setClient(Client client) {
         this.client = client;
@@ -41,9 +30,6 @@ public  class Director implements Supplier<String> {
         return attentionTime;
     }
 
-    public void setAttentionTime(int attentionTime) {
-        this.attentionTime = attentionTime;
-    }
 
     public String Attend() {
 

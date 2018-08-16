@@ -33,7 +33,4 @@ public class Client {
     public void setId(int id) {
         this.id = id;
     }
-
-
-
 }
