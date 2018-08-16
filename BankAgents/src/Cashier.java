@@ -31,15 +31,24 @@ public class Cashier  implements Supplier <String>{
         return Attend();
     }
 
+    public int getAttentionTime() {
+        return attentionTime;
+    }
+
+    public void setAttentionTime(int attentionTime) {
+        this.attentionTime = attentionTime;
+    }
+
     public String Attend() {
 
         attentionTime=(int)Math.floor(Math.random()*(15-10+1)+(10));
+
         try {
             Thread.sleep(attentionTime*1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return name + " "+client.getName()+" "+client.getId()+" "+client.getOperation();
+        return name + " Attends client: "+client.getName()+ " Client Id: "+client.getId()+ " Operation: "+client.getOperation();
     }
 
     public Client getClient() {

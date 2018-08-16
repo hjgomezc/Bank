@@ -38,7 +38,24 @@ public class Supervisor implements Supplier<String> {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return name + " "+client.getName()+" "+client.getId()+" "+client.getOperation();
+        return name + " Attends client: "+client.getName()+ " Client Id: "+client.getId()+ " Operation: "+client.getOperation();
+    }
+
+    public int getAttentionTime() {
+        return attentionTime;
+    }
+
+    public void setAttentionTime(int attentionTime) {
+        this.attentionTime = attentionTime;
+    }
+
+    public Client getClient() {
+
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 
     public boolean isAvailability() {

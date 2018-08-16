@@ -26,7 +26,8 @@ public class main {
         clients.add(new Client("Camilo",10, BankOperation.Withdrawals));
         clients.add(new Client("Pablo",11, BankOperation.Deposits));
 
-
+       Dispatcher dis= new Dispatcher();
+       dis.attend(clients);
 
 
 
