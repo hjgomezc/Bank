@@ -17,7 +17,10 @@ public class Dispatcher {
         createEmploys(7, 2, 1);
     }
 
-
+    /**
+     * Obtain the available of the cashier
+     * @return cashier
+     */
     private Cashier obtainCashierAvailable() {
         for (Cashier cashier : cashiers) {
             if (cashier.isAvailability()) {
@@ -27,6 +30,10 @@ public class Dispatcher {
         return null;
     }
 
+    /**
+     * Obtain the available of the supervisor
+     * @return supervisor
+     */
     private Supervisor obtainSupervisorAvailable() {
         for (Supervisor supervisor : supervisors) {
             if (supervisor.isAvailability()) {
@@ -36,6 +43,10 @@ public class Dispatcher {
         return null;
     }
 
+    /**
+     * Obtain the avaliable of the director
+     * @return supervisor
+     */
     private Director obtainDirectorAvailable() {
         if (director.isAvailability()) {
             return director;
@@ -43,6 +54,13 @@ public class Dispatcher {
             return null;
         }
     }
+
+    /**
+     * Create the employs that is going to attend the clients.
+     * @param numberCashier
+     * @param numberSupervisor
+     * @param numberDirector
+     */
 
     private void createEmploys(int numberCashier, int numberSupervisor, int numberDirector) {
 
@@ -57,6 +75,11 @@ public class Dispatcher {
         director=new Director("Director", true, null);
 
     }
+
+    /**
+     * Assign a client to a cashier, supervisor or director available
+     * @param clients
+     */
 
     public void attend(List<Client> clients) {
         int i = 0;
